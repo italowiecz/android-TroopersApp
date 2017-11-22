@@ -11,6 +11,7 @@ import android.widget.ResourceCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.italo.troopersapp.model.Affiliation;
 import com.italo.troopersapp.model.Trooper;
 import com.italo.troopersapp.util.Constants;
 import com.italo.troopersapp.util.ResourceUtil;
@@ -23,7 +24,8 @@ import com.squareup.picasso.Picasso;
 public class DetailActivity extends AppCompatActivity {
 
     private TextView tvTrooperDescription;
-    private ImageView imvTrooperImage, imvTrooperAffiliation;
+    private ImageView imvTrooperImage;
+    private ImageView imvTrooperAffiliation;
     private Trooper trooper;
 
     @Override
@@ -31,12 +33,19 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        tvTrooperDescription = findViewById(R.id.trooper_affiliation);
-        imvTrooperImage = findViewById(R.id.trooper_affiliation);
+        componentsInitialize();
+
+        trooperBind();
+    }
+
+    private void componentsInitialize() {
+        tvTrooperDescription = findViewById(R.id.trooper_text);
+        imvTrooperImage = findViewById(R.id.trooper_image);
         imvTrooperAffiliation = findViewById(R.id.trooper_affiliation);
+}
 
+    private void trooperBind() {
         trooper = (Trooper) getIntent().getSerializableExtra(Constants.TROOPER_EXTRA);
-
         tvTrooperDescription.setText(trooper.getDescription());
         imvTrooperAffiliation.setImageResource(ResourceUtil.getResourceBasedOnAffiliation(trooper.getAffiliation()));
         setTitle(trooper.getName());

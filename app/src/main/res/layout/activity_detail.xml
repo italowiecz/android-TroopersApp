@@ -7,24 +7,21 @@
     android:layout_marginRight="20dp">
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/trooper_text"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:text="DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
         android:textSize="18sp"/>
 
     <ImageView
-        android:id="@+id/trooper"
+        android:id="@+id/trooper_image"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/galactic_empire"/>
+        android:layout_alignParentRight="true"/>
 
     <ImageView
-        android:id="@+id/affiliation"
+        android:id="@+id/trooper_affiliation"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/trooper"
-        android:src="@drawable/galactic_empire"/>
+        android:layout_below="@id/trooper_image"/>
 </RelativeLayout>

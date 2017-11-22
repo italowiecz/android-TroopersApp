@@ -14,7 +14,7 @@ public class Trooper implements Serializable {
     private String imageUrl;
     private Affiliation affiliation;
 
-    public Trooper(int id, String name, String description, String imageUrl, Affiliation affiliation) {
+    public Trooper(int id, String name, String imageUrl, String description, Affiliation affiliation) {
         this.id = id;
         this.name = name;
         this.description = description;
