@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TroopersApp</string>
+    <string name="trooper">Trooper\'s Name</string>
+    <string name="adicionar">Adicionar</string>
 </resources>

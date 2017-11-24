@@ -4,6 +4,6 @@
     <item
         android:id="@+id/plus_itemm"
         android:icon="@drawable/ic_add_white_24dp"
-        android:title="Favoritar"
+        android:title="Adicionar"
         app:showAsAction="always" />
 </menu>
