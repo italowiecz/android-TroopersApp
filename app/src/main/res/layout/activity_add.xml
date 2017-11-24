@@ -9,7 +9,7 @@
     tools:context="com.italo.troopersapp.AddActivity">
 
         <EditText
-            android:id="@+id/meu_editText"
+            android:id="@+id/etTrooperName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/meu_textView"
@@ -19,12 +19,12 @@
             android:inputType="text" />
 
         <Spinner
-            android:id="@+id/planets_spinner"
+            android:id="@+id/sAffiliation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/meu_button"
+        android:id="@+id/bAddTrooper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

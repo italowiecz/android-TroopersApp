@@ -22,6 +22,10 @@ public class Trooper implements Serializable {
         this.affiliation = affiliation;
     }
 
+    public Trooper() {
+
+    }
+
     public int getId() {
         return id;
     }
@@ -40,5 +44,25 @@ public class Trooper implements Serializable {
 
     public Affiliation getAffiliation() {
         return affiliation;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setAffiliation(Affiliation affiliation) {
+        this.affiliation = affiliation;
     }
 }

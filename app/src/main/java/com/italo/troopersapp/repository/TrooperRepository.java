@@ -29,7 +29,6 @@ public class TrooperRepository {
             new Trooper(8, "Shadowtrooper", "https://vignette.wikia.nocookie.net/stormtrooper/images/9/99/902298-product-silo.png/revision/latest/scale-to-width-down/140", "The shadow stormtroopers, also known as Blackhole stormtroopers due to their association with Agent Blackhole, were specialized Imperial stormtroopers.", Affiliation.GALACTIC_EMPIRE),
             new Trooper(9, "Captain Phasma", "https://vignette4.wikia.nocookie.net/star-wars-canon/images/d/da/Captain-phasma-star-wars-ep7-the-force-awakens-characters-cut-out-with-transparent-background_30.png/revision/latest/scale-to-width-down/140", "Phasma was a human female stormtrooper Captain of the First Order. She served as part of the unofficial commanding triumvirate for the First Order and their Starkiller Base operation, taking charge of the command of the First Order's stormtrooper soldiers.", Affiliation.FIRST_ORDER)));
 
-
     public static ArrayList<Trooper> getAll() {
         return TROOPERS;
     }
