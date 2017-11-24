@@ -1,8 +1,11 @@
 package com.italo.troopersapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -48,12 +51,14 @@ public class AddActivity extends AppCompatActivity {
                 troopers.add(createNewTrooper());
                 TrooperRepository.saveToSharedPreferences(troopers, sharedPreferences);
                 toast = Toast.makeText(getApplicationContext(), "TROOPER ADICIONADO", Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
     }
 
     private Trooper createNewTrooper() {
         newTrooper = new Trooper();
+        newTrooper.setId(troopers.size() + 1);
         newTrooper.setName(etTrooperName.getText().toString());
         newTrooper.setAffiliation(getTrooperAffiliation(sAffiliation.getSelectedItem().toString()));
         newTrooper.setDescription("Teste");
@@ -87,4 +92,21 @@ public class AddActivity extends AppCompatActivity {
         bAddTrooper = findViewById(R.id.bAddTrooper);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.add_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.voltar:
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }

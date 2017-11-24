@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ResourceCursorAdapter;
 import android.widget.TextView;
@@ -42,7 +43,7 @@ public class DetailActivity extends AppCompatActivity {
         tvTrooperDescription = findViewById(R.id.trooper_text);
         imvTrooperImage = findViewById(R.id.trooper_image);
         imvTrooperAffiliation = findViewById(R.id.trooper_affiliation);
-}
+    }
 
     private void trooperBind() {
         trooper = (Trooper) getIntent().getSerializableExtra(Constants.TROOPER_EXTRA);
@@ -69,4 +70,6 @@ public class DetailActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
